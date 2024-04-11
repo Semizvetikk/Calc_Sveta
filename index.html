@@ -4,23 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Калькулятор</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Подключаем файл со стилями-->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<!-- Всё, что выше, является стандартным шаблоном. Его детально разбирать нет нужды -->
 
 <body>
-    <!-- Ниже представлены элементы Див, которые очень легко представить в виде коробок. У коробок могут
-    быть классы и АйДи, они ничем не отличаются глобально. Это своеобразные маркеры, по которым
-    применяются стили и выполняются скрипты -->
-    <div class="calculator"> <!-- Наша первая "коробка", с маркером "калькулятор". Это весь калькулятор-->
-        <input type="text" id="display" readonly> <!-- Экранчик калькулятора с АйДи "Дисплей"-->
-        <div class="buttons"> <!-- Коробка с кнопками калькулятора-->
-            <button onclick="clearDisplay()">C</button> <!-- Далее одинаковые кнопки. У каждой кнокпи есть
-            событие "onclick", которое, при нажатии на кнопку, что-то запускает. В нашем случае, это функции
-        appendToDisplay (Передаёт символ для введения на экран), negative (Умножение на -1),
-        backspace (Удаление последнего символа). Подробне эти функции разобраны в фвйле скрипта.
-        Кроме того, кнопки с операторами (+-*/) содержат класс "Оператор", чтобы их можно было отличить скрипту.-->
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <button onclick="clearDisplay()">C</button>
             <button onclick="negative()">±</button>
             <button onclick="backspace()">←</button>
             <button class="operator" onclick="appendToDisplay('/')">÷</button>
@@ -41,6 +33,6 @@
             <button class="equal" onclick="calculate()">=</button>
         </div>
     </div>
-    <script src="script.js"></script> <!-- Подключаем файл скрипта-->
+    <script src="script.js"></script>
 </body>
 </html>
